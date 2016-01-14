@@ -4708,6 +4708,20 @@ public final class Settings {
                 ANY_INTEGER_VALIDATOR;
 
         /**
+         * whether to enable or disable vibration on succesful fingerprint auth
+         *
+         * @hide
+         */
+        public static final String FINGERPRINT_SUCCESS_VIB = "fingerprint_success_vib";
+
+        /**
+         * whether to enable or disable vibration on error fingerprint auth
+         *
+         * @hide
+         */
+        public static final String FINGERPRINT_ERROR_VIB = "fingerprint_error_vib";
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *

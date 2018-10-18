@@ -39,6 +39,7 @@ import com.android.systemui.qs.tiles.DataSaverTile;
 import com.android.systemui.qs.tiles.DndTile;
 import com.android.systemui.qs.tiles.FlashlightTile;
 import com.android.systemui.qs.tiles.HotspotTile;
+import com.android.systemui.qs.tiles.HeadsUpTile;
 import com.android.systemui.qs.tiles.IntentTile;
 import com.android.systemui.qs.tiles.LocationTile;
 import com.android.systemui.qs.tiles.NfcTile;
@@ -81,6 +82,7 @@ public class QSFactoryImpl implements QSFactory {
     //Omni
     private final Provider<AODTile> mAODTileProvider;
     private final Provider<CaffeineTile> mCaffeineTileProvider;
+    private final Provider<HeadsUpTile> mHeadsUpTileProvider;
 
     private QSTileHost mHost;
 
@@ -105,7 +107,8 @@ public class QSFactoryImpl implements QSFactory {
             Provider<GarbageMonitor.MemoryTile> memoryTileProvider,
             Provider<UiModeNightTile> uiModeNightTileProvider,
             Provider<AODTile> aodTileProvider,
-            Provider<CaffeineTile> CaffeineTileProvider) {
+            Provider<CaffeineTile> CaffeineTileProvider,
+            Provider<HeadsUpTile> headsupTileProvider) {
         mWifiTileProvider = wifiTileProvider;
         mBluetoothTileProvider = bluetoothTileProvider;
         mCellularTileProvider = cellularTileProvider;
@@ -128,6 +131,7 @@ public class QSFactoryImpl implements QSFactory {
 	//Omni
         mAODTileProvider = aodTileProvider;
         mCaffeineTileProvider = CaffeineTileProvider;
+        mHeadsUpTileProvider = headsupTileProvider;
     }
 
     public void setHost(QSTileHost host) {
@@ -186,6 +190,8 @@ public class QSFactoryImpl implements QSFactory {
                 return mAODTileProvider.get();
             case "caffeine":
                 return mCaffeineTileProvider.get();
+            case "heads_up":
+                return mHeadsUpTileProvider.get();
         }
 
         // Intent tiles.

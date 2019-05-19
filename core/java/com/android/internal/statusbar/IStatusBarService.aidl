@@ -115,4 +115,5 @@ interface IStatusBarService
      * AOSiP
      */
     void toggleCameraFlash();
+    void toggleCameraFlashState(boolean enable);
 }

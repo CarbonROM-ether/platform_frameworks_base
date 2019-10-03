@@ -4907,6 +4907,14 @@ public final class Settings {
         private static final Validator DOUBLE_TAP_SLEEP_LOCKSCREEN_VALIDATOR =
                 BOOLEAN_VALIDATOR;
 
+        /**
+         * @hide
+         */
+        public static final String NAV_BAR_GESTURAL_HIDE_NAV = "nav_bar_gestural_hide_nav";
+
+        /** @hide */
+        private static final Validator NAV_BAR_GESTURAL_HIDE_NAV_VALIDATOR =
+                BOOLEAN_VALIDATOR;
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
@@ -5008,6 +5016,7 @@ public final class Settings {
             HEADS_UP_BLACKLIST_VALUES,
             DOUBLE_TAP_SLEEP_GESTURE,
             DOUBLE_TAP_SLEEP_LOCKSCREEN,
+            NAV_BAR_GESTURAL_HIDE_NAV,
         };
 
         /**
@@ -5165,6 +5174,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HEADS_UP_BLACKLIST_VALUES);
             PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_GESTURE);
             PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_LOCKSCREEN);
+            PRIVATE_SETTINGS.add(NAV_BAR_GESTURAL_HIDE_NAV);
         }
 
         /**
@@ -5298,6 +5308,7 @@ public final class Settings {
             VALIDATORS.put(HEADS_UP_BLACKLIST_VALUES, HEADS_UP_BLACKLIST_VALUES_VALIDATOR);
             VALIDATORS.put(DOUBLE_TAP_SLEEP_GESTURE, DOUBLE_TAP_SLEEP_GESTURE_VALIDATOR);
             VALIDATORS.put(DOUBLE_TAP_SLEEP_LOCKSCREEN, DOUBLE_TAP_SLEEP_LOCKSCREEN_VALIDATOR);
+            VALIDATORS.put(NAV_BAR_GESTURAL_HIDE_NAV, NAV_BAR_GESTURAL_HIDE_NAV_VALIDATOR);
         }
 
         /**

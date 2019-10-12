@@ -226,7 +226,7 @@ public class EdgeBackGestureHandler implements DisplayListener {
     }
 
     private void updateIsEnabled() {
-        boolean isEnabled = mIsGesturalModeEnabled;
+        boolean isEnabled = mIsAttached && mIsGesturalModeEnabled;
         if (isEnabled == mIsEnabled) {
             return;
         }

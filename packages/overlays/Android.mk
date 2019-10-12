@@ -27,6 +27,7 @@ LOCAL_REQUIRED_MODULES := \
 	DisplayCutoutEmulationCornerOverlay \
 	DisplayCutoutEmulationDoubleOverlay \
 	DisplayCutoutEmulationTallOverlay \
+	FontAnaheimOverlay \
 	FontArbutusSourceOverlay \
 	FontArvoLatoOverlay \
 	FontNotoSerifSourceOverlay \
